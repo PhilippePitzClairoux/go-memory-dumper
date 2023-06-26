@@ -6,7 +6,7 @@ You can pipe the output of the program to store it in a file if you want.
 ```bash
 git clone https://github.com/PhilippePitzClairoux/go-memory-dumper \
     && cd go-memory-dumper \
-    && go build cmd/MemoryDumper.go
+    && go build .
 ```
 
 ## Usable Arguments

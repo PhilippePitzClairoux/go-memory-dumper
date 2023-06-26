@@ -1,10 +1,10 @@
 package main
 
 import (
+	"PhilippePitzClairoux/go-memory-reader/memory"
+	"PhilippePitzClairoux/go-memory-reader/processes"
 	"flag"
 	"fmt"
-	memh "memory-dumper/cmd/pkg/MemoryHelper"
-	processes "memory-dumper/cmd/pkg/Processes"
 	"os"
 	"path/filepath"
 	"sync"
@@ -56,10 +56,10 @@ func pidChannelConsummer(pidChannel chan []processes.Process) {
 			// Get the path to the process's memory map file
 			memMapFilePath := filepath.Join("/proc", currentPid.PID, "maps")
 
-			memMapData := memh.ReadMemoryMapFile(memMapFilePath)
+			memMapData := memory.ReadMemoryMapFile(memMapFilePath)
 
-			memoryRanges := memh.ParseMemoryMap(memMapData)
-			go memh.DumpMemoryRanges(memoryRanges, &currentPid, hideEmptyLines, &wg)
+			memoryRanges := memory.ParseMemoryMap(memMapData)
+			go memory.DumpMemoryRanges(memoryRanges, &currentPid, hideEmptyLines, &wg)
 		}
 	}
 }
