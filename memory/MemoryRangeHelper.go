@@ -1,11 +1,11 @@
-package MemoryHelper
+package memory
 
 import (
+	"PhilippePitzClairoux/go-memory-reader/processes"
 	"bufio"
 	"errors"
 	"fmt"
 	"log"
-	processes "memory-dumper/cmd/pkg/Processes"
 	"os"
 	"regexp"
 	"strconv"

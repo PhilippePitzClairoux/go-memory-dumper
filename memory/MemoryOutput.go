@@ -1,4 +1,4 @@
-package MemoryHelper
+package memory
 
 import (
 	"bytes"
