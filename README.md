@@ -4,9 +4,9 @@ You can pipe the output of the program to store it in a file if you want.
 
 ## Try it out yourself
 ```bash
-git clone https://github.com/PhilippePitzClairoux/MemoryReader 
-  && cd memoryreader
-  && go build cmd/MemoryDumper.go
+git clone https://github.com/PhilippePitzClairoux/go-memory-dumper \
+    && cd go-memory-dumper \
+    && go build cmd/MemoryDumper.go
 ```
 
 ## Usable Arguments
